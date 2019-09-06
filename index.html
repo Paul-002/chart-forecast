@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pogoda chart.js</title>
+    <meta name="description" content="bootstrap & chart.js" />
+    <meta name="author" content="Paweł Gąsiorowski" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css.css" />
+  </head>
+
+  <body class="bg-dark">
+    <section class="card text-white bg-dark p-2" id="weather_five">
+      <form>
+        <h3>Pogoda pięciodniowa</h3>
+        <input
+          class="p-1"
+          id="city_five"
+          type="text"
+          placeholder="Wpisz miasto..."
+          value="Wrocław"
+        />
+        <input
+          type="button"
+          onclick="validate()"
+          class="p-1"
+          id="btn_five"
+          name="five_days"
+          value="pobierz"
+        />
+        <p id="prompt_five" style="display: none;">Podaj nazwę miejscowości!</p>
+        <p id="prompt_city" style="display: none;">
+          Jesteś pewny że istnieje takie miasto? Sprawdź jeszcze raz.
+        </p>
+      </form>
+    </section>
+
+    <section class="container-fluid bg-dark">
+      <div class="chart">
+        <canvas id="myChart">your bowser do not support canvas element</canvas>
+      </div>
+    </section>
+
+    <section class="container-fluid bg-dark">
+      <div class="chart">
+        <canvas id="myChart2">your bowser do not support canvas element</canvas>
+      </div>
+    </section>
+
+    <section class="container-fluid bg-dark">
+      <div class="chart">
+        <canvas id="myChart3">your bowser do not support canvas element</canvas>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred"></script>
+    <script src="js.js"></script>
+  </body>
+</html>
